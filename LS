@@ -1,10 +1,32 @@
 #include <stdio.h>
-#include<stdlib.h>
+#include <stdlib.h>
 
 int main()
 {
-  printf("Please enter an operator: ");
-  scanf("%c")
-  printf("Please enter two integers: ");
-  scanf("%d");
+    double n1, n2;
+    char operator;
+    printf("Please enter an operator, (+,-,/,*): \n");
+    scanf("%c" ,&operator);
+    printf("Please enter two integers: \n");
+    scanf("%lf %lf" ,&n1, &n2);
+    switch(operator)
+    {
+        case '+':
+            printf("%.1lf + %.1lf = %.1lf",n1,n2,n1+n2);
+            break;
+        case '-':
+            printf("%.1lf - %.1lf = %.1lf",n1,n2,n1-n2);
+            break;
+        case '*':
+            printf("%.1lf * %.1lf = %.1lf",n1,n2,n1*n2);
+            break;
+        case '/':
+            printf("%.1lf / %.1lf = %.1lf",n1,n2,n1/n2);
+            break;
+
+        default:
+            printf("Error: Operator is not correct!");
+    }
+    return 0;
 }
+
